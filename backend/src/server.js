@@ -16,7 +16,7 @@ const port = process.env.PORT || 5000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:5173" }));
+app.use(cors({ origin: process.env.CLIENT_URL }));
 app.use(express.json());
 
 app.get("/api/health", (_req, res) => {
